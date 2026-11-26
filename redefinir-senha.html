@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5ead8">
+    <title>DS - Redefinir senha</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="auth-screen reset-screen">
+      <header class="auth-identity">
+        <div class="auth-logo-frame">
+          <img class="auth-logo" src="img/logo.png" alt="Logo do DS">
+        </div>
+        <h1 class="auth-title">Redefinir senha</h1>
+      </header>
+
+      <form class="auth-form reset-fields" id="reset-form">
+        <div class="auth-field">
+          <label for="new-password">Nova senha</label>
+          <input id="new-password" name="password" type="password" placeholder="Digite sua nova senha" autocomplete="new-password" required>
+        </div>
+        <div class="auth-field">
+          <label for="password-confirmation">Confirmar senha</label>
+          <div class="password-entry">
+            <input id="password-confirmation" name="password-confirmation" type="password" placeholder="Confirme sua senha" autocomplete="new-password" required>
+            <button class="password-toggle" type="button" aria-label="Mostrar senha" aria-controls="password-confirmation" aria-pressed="false">
+              <img src="img/eye-login.svg" alt="">
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <button class="auth-primary reset-submit" type="submit" form="reset-form">Salvar</button>
+      <p class="form-status" role="status" aria-live="polite"></p>
+    </main>
+  </body>
+</html>

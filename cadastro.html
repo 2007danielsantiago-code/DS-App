@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5ead8">
+    <title>DS - Criar conta</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="auth-screen signup-screen">
+      <header class="auth-identity signup-identity">
+        <img class="auth-logo signup-logo" src="img/logo.png" alt="Logo do DS">
+        <h1 class="auth-title">Criar conta</h1>
+      </header>
+
+      <form class="auth-form signup-fields" id="signup-form">
+        <div class="auth-field">
+          <label for="signup-name">Nome</label>
+          <input id="signup-name" name="name" type="text" placeholder="Seu nome" autocomplete="name" required>
+        </div>
+        <div class="auth-field">
+          <label for="signup-email">E-mail</label>
+          <input id="signup-email" name="email" type="email" placeholder="seuemail@exemplo.com" autocomplete="email" required>
+        </div>
+        <div class="auth-field">
+          <label for="signup-password">Senha</label>
+          <div class="password-entry">
+            <input id="signup-password" name="password" type="password" placeholder="Digite sua senha" autocomplete="new-password" required>
+            <button class="password-toggle" type="button" aria-label="Mostrar senha" aria-controls="signup-password" aria-pressed="false">
+              <img src="img/eye-login.svg" alt="">
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <button class="auth-primary signup-submit" type="submit" form="signup-form">Criar conta</button>
+      <div class="auth-divider signup-divider">
+        <span></span>
+        <span class="divider-label">ou</span>
+        <span></span>
+      </div>
+      <button class="google-button signup-google" type="button">
+        <img src="img/google logo.png" alt="">
+        <span>Cadastrar com Google</span>
+      </button>
+
+      <a class="signup-login-link" href="login.html">Já tenho uma conta</a>
+      <p class="form-status" role="status" aria-live="polite"></p>
+    </main>
+  </body>
+</html>
