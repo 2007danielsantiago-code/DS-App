@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5ead8">
+    <title>DS - Página principal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script type="module" src="firebase-auth.js"></script>
+  </head>
+  <body>
+    <main class="main-screen">
+      <div class="main-background-top"></div>
+      <div class="main-background-band band-one"></div>
+      <div class="main-background-band band-two"></div>
+      <div class="main-background-band band-three"></div>
+      <div class="main-background-band band-four"></div>
+      <div class="main-background-band band-five"></div>
+
+      <header class="main-header">
+        <img class="main-logo" src="img/logo.png" alt="Logo do DS">
+        <div class="plan-badge" id="plan-selector" role="group" aria-label="Escolher plano">
+          <button class="plan-option" type="button" data-plan="free" aria-pressed="false">Free</button>
+          <button class="plan-option" type="button" data-plan="plus" aria-pressed="false">Plus</button>
+        </div>
+        <div class="account-actions" id="account-menu" hidden>
+          <button class="logout-action" type="button" aria-label="Sair da conta">
+            <img src="img/sair.png" alt="">
+          </button>
+          <button class="delete-account-action" type="button" aria-label="Excluir conta">
+            <img src="img/excluirconta.png" alt="">
+          </button>
+        </div>
+        <button class="settings-action" type="button" aria-label="Configurações" aria-controls="account-menu" aria-expanded="false">
+          <img src="img/engrenagem.png" alt="">
+        </button>
+        <button class="notifications-action" type="button" aria-label="Notificações">
+          <img src="img/sino.png" alt="">
+        </button>
+      </header>
+      <p class="account-status" role="status" aria-live="polite"></p>
+
+      <section class="main-card" aria-label="Página inicial">
+        <h1 id="home-greeting">Olá Daniel</h1>
+        <img class="main-book" src="img/livro.png" alt="">
+        <img class="main-decoration" src="img/main-polygon.svg" alt="">
+      </section>
+
+      <nav class="bottom-navigation" aria-label="Navegação principal">
+        <div class="navigation-bar"></div>
+        <a class="home-navigation" href="index.html" aria-label="Início">
+          <img src="img/casa.png" alt="">
+        </a>
+        <span class="selected-navigation" aria-current="page">
+          <img src="img/nav-search-ring.svg" alt="">
+        </span>
+        <button class="search-navigation" type="button" aria-label="Buscar">
+          <img src="img/lupa.png" alt="">
+        </button>
+        <button class="profile-navigation" type="button" aria-label="Perfil">
+          <img id="home-profile-picture" src="img/perfil.png" alt="">
+        </button>
+      </nav>
+    </main>
+  </body>
+</html>

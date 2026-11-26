@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5ead8">
+    <title>DS - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script type="module" src="firebase-auth.js"></script>
+  </head>
+  <body>
+    <main class="auth-screen login-screen">
+      <header class="auth-identity">
+        <div class="auth-logo-frame">
+          <img class="auth-logo" src="img/logo.png" alt="Logo do DS">
+        </div>
+        <h1 class="auth-title">Login</h1>
+      </header>
+
+      <form class="auth-form login-fields" id="login-form">
+        <div class="auth-field">
+          <label for="login-email">E-mail</label>
+          <input id="login-email" name="email" type="email" placeholder="seuemail@exemplo.com" autocomplete="email" required>
+        </div>
+        <div class="auth-field">
+          <label for="login-password">Senha</label>
+          <div class="password-entry">
+            <input id="login-password" name="password" type="password" placeholder="Digite sua senha" autocomplete="current-password" required>
+            <button class="password-toggle" type="button" aria-label="Mostrar senha" aria-controls="login-password" aria-pressed="false">
+              <img src="img/eye-login.svg" alt="">
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <a class="forgot-password" href="redefinir-senha.html">Esqueceu sua senha?</a>
+      <button class="auth-primary login-submit" type="submit" form="login-form">Entrar</button>
+
+      <div class="auth-divider">
+        <span></span>
+        <span class="divider-label">ou</span>
+        <span></span>
+      </div>
+
+      <button class="google-button login-google" type="button">
+        <img src="img/google logo.png" alt="">
+        <span>Continuar com Google</span>
+      </button>
+
+      <p class="auth-footer login-footer">
+        Ainda não tem uma conta?
+        <a href="cadastro.html">Criar conta</a>
+      </p>
+      <p class="form-status" role="status" aria-live="polite"></p>
+    </main>
+  </body>
+</html>

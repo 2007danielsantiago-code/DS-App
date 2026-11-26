@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5ead8">
+    <title>DS - Redefinir senha</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script type="module" src="firebase-auth.js"></script>
+  </head>
+  <body>
+    <main class="auth-screen reset-screen">
+      <header class="auth-identity">
+        <div class="auth-logo-frame">
+          <img class="auth-logo" src="img/logo.png" alt="Logo do DS">
+        </div>
+        <h1 class="auth-title">Redefinir senha</h1>
+      </header>
+
+      <form class="auth-form reset-fields" id="reset-form">
+        <div class="auth-field">
+          <label for="reset-email">E-mail</label>
+          <input id="reset-email" name="email" type="email" placeholder="seuemail@exemplo.com" autocomplete="email" required>
+        </div>
+      </form>
+
+      <button class="auth-primary reset-submit" type="submit" form="reset-form">Enviar link</button>
+      <p class="form-status" role="status" aria-live="polite"></p>
+    </main>
+  </body>
+</html>

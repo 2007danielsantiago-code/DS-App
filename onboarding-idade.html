@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5ead8">
+    <title>DS - Sua idade</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="flow-screen age-screen">
+      <img class="flow-logo" src="img/logo.png" alt="Logo do DS">
+      <h1 class="flow-title age-title">Qual sua idade ?</h1>
+      <output class="age-value" id="age-value" for="age-range">25 Anos</output>
+
+      <form id="age-form">
+        <label class="visually-hidden" for="age-range">Idade em anos</label>
+        <input id="age-range" class="age-range" type="range" min="0" max="100" value="25">
+        <button class="flow-primary" type="submit">Próximo</button>
+      </form>
+    </main>
+  </body>
+</html>

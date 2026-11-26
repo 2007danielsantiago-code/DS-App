@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5ead8">
+    <title>DS - Foto de perfil</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="flow-screen photo-screen">
+      <h1 class="flow-title photo-title">Escolha uma foto para seu perfil</h1>
+
+      <img class="profile-preview" id="profile-preview" src="img/perfil.png" alt="Prévia da foto de perfil">
+      <input class="visually-hidden" id="profile-photo-input" type="file" accept="image/*" tabindex="-1" aria-hidden="true">
+      <button class="photo-picker camera-picker" type="button" data-capture="user" aria-label="Tirar uma foto">
+        <img src="img/camera.png" alt="">
+      </button>
+      <button class="photo-picker gallery-picker" type="button" aria-label="Escolher uma foto da galeria">
+        <img src="img/galeria.png" alt="">
+      </button>
+
+      <p class="photo-status" id="photo-status" role="status" aria-live="polite"></p>
+
+      <a class="flow-primary photo-skip skip-profile" href="principal.html">Pular</a>
+      <form id="profile-form">
+        <button class="flow-primary photo-finish" type="submit">Finalizar</button>
+      </form>
+    </main>
+  </body>
+</html>
